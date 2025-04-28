@@ -8,7 +8,7 @@ fn main() {
     let cycle_time = Duration::minutes(90);
 
     for i in 1..cycle_count+1 {
-        let cycles = cycle_time.checked_mul(i).expect("ooh");
+        let cycles = cycle_time.checked_mul(i).expect("oops");
         let itt = now + nod_time + cycles;
         println!("{:0>2}:{:0>2}:{:0>2}", itt.hour(), itt.minute(), itt.hour());
     }
